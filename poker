@@ -1,0 +1,35 @@
+public class Kata{
+  public static boolean CheckIfFlush(String[] cards){
+   
+  boolean poker = true;
+        int contadorH = 0;
+        int contadorS = 0;
+        int contadorD = 0;
+        int contadorC = 0;
+        for (int i = 0; i < cards.length; i++) {
+            for (int j = 0; j < cards[i].length(); j++) {
+
+                if (cards[i].charAt(j) == 'H') {
+                    contadorH++;
+                }
+                if (cards[i].charAt(j) == 'S') {
+                    contadorS++;
+                }
+                if (cards[i].charAt(j) == 'D') {
+                    contadorD++;
+                }
+                if (cards[i].charAt(j) == 'C') {
+                    contadorC++;
+                }
+
+            }
+
+        }
+        if (contadorH == 5 ||contadorS == 5 ||contadorD == 5 ||contadorC == 5) {
+            return true;
+
+        } 
+            
+        return false;
+    }
+}
