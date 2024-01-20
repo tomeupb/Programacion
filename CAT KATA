@@ -1,0 +1,81 @@
+public class PeacefulYard {
+    public static boolean peacefulYard(String[] yard, int minDistance) {
+        int[] lou = {-1, -1}; //array de dos posiciones inicializado con -1
+        int[] moustache = {-1, -1};
+        int[] raoul = {-1, -1};
+        boolean L = false;
+        boolean M = false;
+        boolean R = false;
+        int tGatos = 0;
+        int distancia = 0;
+        boolean pelea = true;
+        
+        for (int i = 0; i < yard.length; i++) {
+            for (int j = 0; j < yard[i].length(); j++) {
+
+                if (yard[i].charAt(j) == 'L') {
+                    tGatos++;
+                    L = true;
+
+                    lou[0] = i;
+                    lou[1] = j;
+
+                } else if (yard[i].charAt(j) == 'M') {
+                    tGatos++;
+                    M = true;
+
+                    moustache[0] = i;
+                    moustache[1] = j;
+
+                } else if (yard[i].charAt(j) == 'R') {
+                    tGatos++;
+                    R = true;
+                    raoul[0] = i;
+                    raoul[1] = j;
+
+                }
+            }
+        }
+
+        if (tGatos == 2) {
+           
+            if(!R){
+                
+                distancia =(int)(Math.sqrt(Math.pow(lou[0]-moustache[0], 2)+Math.pow(moustache[1]-lou[1], 2))) ;   
+            }else if(!L){
+                 distancia =(int)(Math.sqrt(Math.pow(raoul[0]-moustache[0], 2)+Math.pow(moustache[1]-raoul[1], 2))) ;  
+                
+            }else if(!M){
+                distancia =(int)(Math.sqrt(Math.pow(raoul[0]-lou[0], 2)+Math.pow(lou[1]-raoul[1], 2))) ; 
+              
+                
+            }
+            if(distancia<minDistance){
+                    pelea = false;
+                }
+
+        }else if(tGatos == 3) {
+            
+            for(int i =0 ; i<tGatos && pelea  ; i++){
+                  
+                if(i == 0){//vuelta1
+                    
+                    distancia =(int)(Math.sqrt(Math.pow(lou[0]-moustache[0], 2)+Math.pow(moustache[1]-lou[1], 2))) ;   
+                    
+                }else if(i == 1){
+                     distancia =(int)(Math.sqrt(Math.pow(raoul[0]-moustache[0], 2)+Math.pow(moustache[1]-raoul[1], 2))) ;  
+                
+                } else if(i == 2){
+                     distancia =(int)(Math.sqrt(Math.pow(raoul[0]-lou[0], 2)+Math.pow(lou[1]-raoul[1], 2))) ; 
+                }
+                
+                if(distancia<minDistance){
+                    pelea = false;
+                }
+                
+            }
+            
+        }
+      return pelea;
+    }
+}
