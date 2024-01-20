@@ -1,0 +1,15 @@
+ public class Kata {
+    public static int dontGiveMeFive(int start, int end) {
+        int contador = 0;
+
+        for (int i = start; i <= end; i++) {
+            if (String.valueOf(i).contains("5")) {
+                continue;  // Skip to the next number if it contains the digit 5
+            }
+
+            contador++;
+        }
+
+        return contador;
+    }
+}
