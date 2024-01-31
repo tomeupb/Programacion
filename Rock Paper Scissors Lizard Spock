@@ -1,0 +1,39 @@
+ublic class Kata {
+  
+  public static String rpsls(String player1, String player2){
+    
+    player1 = player1.toLowerCase();
+        player2 = player2.toLowerCase();
+
+        if (player1.equals(player2)) {
+            return "Draw!";
+        }
+
+       
+        if ((player1 + player2).equals("scissorspaper")
+                || (player1 + player2).equals("paperrock")
+                || (player1 + player2).equals("rocklizard")
+                || (player1 + player2).equals("lizardspock")
+                || (player1 + player2).equals("spockscissors")
+                || (player1 + player2).equals("scissorslizard")
+                || (player1 + player2).equals("lizardpaper")
+                || (player1 + player2).equals("paperspock")
+                || (player1 + player2).equals("spockrock")
+                || (player1 + player2).equals("rockscissors")) {
+            return "Player 1 Won!";
+        } else if ((player2 + player1).equals("scissorspaper")
+                || (player2 + player1).equals("paperrock")
+                || (player2 + player1).equals("rocklizard")
+                || (player2 + player1).equals("lizardspock")
+                || (player2 + player1).equals("spockscissors")
+                || (player2 + player1).equals("scissorslizard")
+                || (player2 + player1).equals("lizardpaper")
+                || (player2 + player1).equals("paperspock")
+                || (player2 + player1).equals("spockrock")
+                || (player2 + player1).equals("rockscissors")) {
+            return "Player 2 Won!";
+        }
+
+        return "Draw!";
+    }
+  }
