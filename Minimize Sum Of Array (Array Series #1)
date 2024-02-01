@@ -1,0 +1,35 @@
+import java.util.*;
+public class Solution
+{
+    public static int minSum(int[] passed)
+    {
+       
+
+        int total = 0;
+
+        for (int i = 0; i < passed.length - 1; i++) {
+            for (int j = 0; j < passed.length - 1 - i; j++) {
+
+                if (passed[j] > passed[j + 1]) {
+
+                    int aux = passed[j];
+
+                    passed[j] = passed[j + 1];
+
+                    passed[j + 1] = aux;
+                }
+
+            }
+        }
+
+        for (int i = 0; i < passed.length/2 ; i++) {
+
+            total += passed[i] * passed[passed.length - 1 - i];
+         
+
+        }
+        
+        return total;
+    }
+
+}
