@@ -1,0 +1,17 @@
+public class Kata {
+  public static String nameThatNumber(int x) {
+   String resultado = "";
+     String[] especiales = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
+        String[] decenas = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
+   if (x < 20 && x >= 0) {
+    resultado = especiales[x];
+
+} else if (x == 20 || x == 30 || x == 40 || x == 50 || x == 60 || x == 70 || x == 80 || x == 90) {
+    resultado = decenas[x / 10];
+
+} else if (x >= 21 || x <= 99) {
+    resultado = decenas[x / 10] +" "+ especiales[x % 10];
+}
+return resultado  ;
+    }
+  }
