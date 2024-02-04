@@ -1,0 +1,43 @@
+public class GoodVsEvil {
+  public static String battle(String goodAmounts, String evilAmounts) {
+    
+    
+       
+        String[] buenos = goodAmounts.split(" ");
+        String[] TropasB = {"1", "2", "3", "3", "4", "10"};
+        int totalB = 0;
+
+        
+        
+       
+        String[] malos = evilAmounts.split(" ");
+        String[] TropasM = {"1", "2", "2", "2", "3", "5", "10"};
+        int totalM = 0;
+
+        for (int i = 0; i < buenos.length; i++) {
+
+            totalB += Integer.parseInt(buenos[i]) * Integer.parseInt(TropasB[i]);
+        
+
+        }
+       
+        for (int i = 0; i < malos.length; i++) {
+
+            totalM += Integer.parseInt(malos[i]) * Integer.parseInt(TropasM[i]);
+           
+        }
+
+        if (totalM > totalB) {
+
+           return "Battle Result: Evil eradicates all trace of Good";
+        } else if (totalB > totalM) {
+           return "Battle Result: Good triumphs over Evil";
+
+        } else {
+
+          return  "Battle Result: No victor on this battle field";
+
+        }
+
+    }
+}
