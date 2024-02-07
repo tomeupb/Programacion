@@ -1,0 +1,20 @@
+public class Kata {
+
+  public static boolean feast(String beast, String dish) {
+    
+        char primerabeast = beast.charAt(0);
+        char ultimabeast = beast.charAt(beast.length() - 1);
+        
+       
+        
+        char primeradish = dish.charAt(0);
+        char ultimadish = dish.charAt(dish.length() - 1);
+        
+        
+        
+        
+            return (primerabeast == primeradish  && ultimadish == ultimabeast);
+  }
+  
+}
+  
