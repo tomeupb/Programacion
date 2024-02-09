@@ -1,0 +1,79 @@
+public class Solution {
+
+    public static int isSolved(int[][] board) {
+   
+        for (int i = 0; i < 3; i++) {
+            if (board[i][0] == 1 && board[i][0] == board[i][1] && board[i][1] == board[i][2]) {
+
+                return 1;
+
+            }
+            if (board[i][0] == 2 && board[i][0] == board[i][1] && board[i][1] == board[i][2]) {
+
+                return 2;
+            }
+        }
+
+//comprobar columnas
+        for (int i = 0; i < 3; i++) {
+            if (board[0][i] == 1 && board[0][i] == board[1][i] && board[1][i] == board[2][i]) {
+                 return 1;
+
+            }
+             if (board[0][i] == 2 && board[0][i] == board[1][i] && board[1][i] == board[2][i]) {
+                return 2;
+
+            }
+
+        }
+
+//comprobar diagonales1 \
+        if (board[0][0] == 1 && board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
+            return 1;
+
+        }
+        if (board[0][0] == 2 && board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
+             return 2;
+
+        }
+//comprobar diagonales2 /
+        if (board[0][2] == 1 && board[0][2] == board[1][1] && board[1][1] == board[2][0]) {
+              return 1;
+
+        }
+        if (board[0][2] == 2 && board[0][2] == board[1][1] && board[1][1] == board[2][0]) {
+            return 2;
+
+        }
+      
+      for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == 0) {
+                    return -1;
+                }
+            }
+        }
+      return 0;
+    }
+}
+1 minute agoRefactorDiscuss
+7 kyu
+Pizza Payments
+Java:
+public class PizzaPayments {
+  public static double michaelPays(double cost) {
+  
+   if(cost < 5){
+      cost = Math.round(cost * 100.0) / 100.0;
+    }else if(cost > 5 && cost < 30){
+      cost -= cost * 1 / 3;
+      cost = Math.round(cost * 100.0) / 100.0;
+    }else if(cost >= 30){
+      cost = cost - 10;
+      cost = Math.round(cost * 100.0) / 100.0;
+    }
+    
+    
+    return cost ;
+  }
+  }
