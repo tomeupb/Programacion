@@ -1,0 +1,17 @@
+public class PizzaPayments {
+  public static double michaelPays(double cost) {
+  
+   if(cost < 5){
+      cost = Math.round(cost * 100.0) / 100.0;
+    }else if(cost > 5 && cost < 30){
+      cost -= cost * 1 / 3;
+      cost = Math.round(cost * 100.0) / 100.0;
+    }else if(cost >= 30){
+      cost = cost - 10;
+      cost = Math.round(cost * 100.0) / 100.0;
+    }
+    
+    
+    return cost ;
+  }
+  }
