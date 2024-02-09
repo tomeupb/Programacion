@@ -1,3 +1,4 @@
+
 public class Solution {
 
     public static int isSolved(int[][] board) {
@@ -56,24 +57,3 @@ public class Solution {
       return 0;
     }
 }
-1 minute agoRefactorDiscuss
-7 kyu
-Pizza Payments
-Java:
-public class PizzaPayments {
-  public static double michaelPays(double cost) {
-  
-   if(cost < 5){
-      cost = Math.round(cost * 100.0) / 100.0;
-    }else if(cost > 5 && cost < 30){
-      cost -= cost * 1 / 3;
-      cost = Math.round(cost * 100.0) / 100.0;
-    }else if(cost >= 30){
-      cost = cost - 10;
-      cost = Math.round(cost * 100.0) / 100.0;
-    }
-    
-    
-    return cost ;
-  }
-  }
