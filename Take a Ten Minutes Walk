@@ -1,0 +1,40 @@
+public class TenMinWalk {
+  public static boolean isValid(char[] walk) {
+        char norte = 'n';
+        char sur =  's';
+        char este = 'e';
+        char oeste = 'w';
+
+        int contadorN = 0;
+        int contadorS = 0;
+        int contadorE = 0;
+        int contadorW = 0;
+    
+     if(walk.length!=10){
+            return false;
+        }
+
+        for (int i = 0; i < walk.length; i++) {
+          
+
+            if (walk[i] == norte) {
+                contadorN++;
+
+            }
+            if (walk[i] == sur) {
+                contadorS++;
+
+            }
+            if (walk[i] == este) {
+                contadorE++;
+
+            }
+            if (walk[i] == oeste) {
+                contadorW++;
+
+            }
+        }
+   
+            return(contadorN == contadorS  && contadorE == contadorW );
+    }
+}
