@@ -1,0 +1,44 @@
+public class Solution {
+  
+   public static int[] largest(int n, int[] arr) {
+
+   
+      
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] < arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+
+                }
+
+            }
+        }
+
+  int[] resultado = new int[n];
+        for (int i = 0; i < n; i++) {
+           
+            resultado[i] = arr[i];
+            //System.out.print(resultado[i]);
+        }
+        
+          for (int i = 0; i < resultado.length - 1; i++) {
+            for (int j = 0; j < resultado.length - 1 - i; j++) {
+                if (resultado[j] > resultado[j + 1]) {
+                    int temp = resultado[j];
+                    resultado[j] = resultado[j + 1];
+                    resultado[j + 1] = temp;
+                    
+                }
+            }
+          }
+          
+        
+        return resultado;
+        
+    
+    }
+
+}
