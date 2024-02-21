@@ -1,0 +1,30 @@
+public class BattleOfTheCharacters {
+    public static String battle(final String x, final String y) {
+
+        String abecedario = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        int indiceX = 0;
+        int indicey = 0;
+
+        for (int i = 0; i < x.length(); i++) {
+            char primero = x.charAt(i);
+            indiceX += abecedario.indexOf(primero) + 1;
+
+        }
+        for (int i = 0; i < y.length(); i++) {
+            char segundo = y.charAt(i);
+            indicey += abecedario.indexOf(segundo) + 1;
+
+        }
+        
+
+        if (indiceX > indicey) {
+            return(x);
+        } else if (indicey > indiceX) {
+            return(y);
+        }else{
+           return("Tie!");
+
+    }
+    }
+}
+
