@@ -1,0 +1,56 @@
+public class Snail {
+
+    public static int[] snail(int[][] array) {
+     // enjoy
+ 
+      int lenghtotal = array.length * array[0].length;
+      int [] numarray = new int [lenghtotal];
+      int filafinal=array.length; 
+      int filainicial=0;
+      int columnafinal=array[0].length;
+      int columnainicial=0;
+      
+      int indice =0;
+      
+      
+      
+      while(indice<lenghtotal){
+        
+        for(int i = columnainicial; i<columnafinal && indice<lenghtotal ; i++){
+          
+          numarray[indice]= array[filainicial][i];
+          indice++;
+        }
+        filainicial++;
+          
+         for(int i = filainicial; i<filafinal && indice<lenghtotal ; i++){
+          
+          numarray[indice]= array[i][columnafinal-1];
+          indice++;
+        }
+         columnafinal--; 
+        
+        for(int i = columnafinal-1; i>= columnainicial && indice<lenghtotal ; i--){
+          
+          numarray[indice]= array[filafinal-1][i];
+          indice++;
+        }
+        filafinal--;
+        
+          
+         for(int i = filafinal-1; i>=filainicial && indice<lenghtotal ; i--){
+          
+          numarray[indice]= array[i][columnainicial];
+          indice++;
+        }
+        columnainicial++; 
+        }
+      
+      return numarray;
+      }
+        
+        
+        
+        
+        
+      
