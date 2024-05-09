@@ -1,0 +1,37 @@
+import java.util.HashMap;
+import java.util.Map;
+public class Kata {
+    public static int findDeletedNumber(int[] arr, int[] mixedArr) {
+    
+
+        HashMap<Integer , Integer> MAPA1 = new HashMap<>();
+
+        HashMap<Integer , Integer> MAPA2 = new HashMap<>();
+
+
+        for(int i =0; i<arr.length ; i++){
+            MAPA1.put(arr[i],i);
+        }
+
+        for(int i =0; i<mixedArr.length ; i++){
+            MAPA2.put(mixedArr[i],i);
+        }
+
+
+       boolean encontrado = false;
+        int falta=0;
+
+
+        for(int num : arr){
+            if(!MAPA2.containsKey(num)){
+                encontrado = true;
+                falta=num;
+                break;
+
+            }
+        }
+        return(falta);
+
+    }
+}
+
