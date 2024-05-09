@@ -8,9 +8,10 @@ Este proyecto consiste en una aplicación de consola de una tienda online donde 
 -Verificar la disponibilidad de productos en stock.
 -Verificar el saldo del cliente antes de realizar una compra.
 -Aplicar descuentos en función del gasto total del cliente.
--Estructura del proyecto
--El proyecto está organizado en varias clases Java:
 
+*Estructura del proyecto*
+
+El proyecto está organizado en varias clases Java:
 producto: Define la clase base para los diferentes tipos de productos disponibles en la tienda.
 productoAlimenticio, productoElectronico, productoTextil: Clases que heredan de producto y representan diferentes categorías de productos.
 usuario: Define la clase base para los usuarios de la tienda.
