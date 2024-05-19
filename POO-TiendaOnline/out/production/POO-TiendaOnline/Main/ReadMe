@@ -1,0 +1,32 @@
+*Tienda Online*
+Este proyecto consiste en una aplicación de consola de una tienda online donde los clientes pueden agregar productos a una cesta de compra y realizar transacciones de compra.
+
+*Características principales*
+-Agregar productos a la cesta de compra.
+-Ver el precio total de la cesta de compra.
+-Calcular e incluir impuestos en el precio total.
+-Verificar la disponibilidad de productos en stock.
+-Verificar el saldo del cliente antes de realizar una compra.
+-Aplicar descuentos en función del gasto total del cliente.
+-Estructura del proyecto
+-El proyecto está organizado en varias clases Java:
+
+producto: Define la clase base para los diferentes tipos de productos disponibles en la tienda.
+productoAlimenticio, productoElectronico, productoTextil: Clases que heredan de producto y representan diferentes categorías de productos.
+usuario: Define la clase base para los usuarios de la tienda.
+cliente: Clase que hereda de usuario y representa a los clientes de la tienda, con funcionalidades relacionadas con el saldo y las transacciones de compra.
+cesta: Clase que gestiona la cesta de compra, permitiendo agregar productos, calcular el precio total y aplicar impuestos.
+descuentos, descuentoCantidad, descuentoPrimeraCompra: Interfaces y clases que gestionan descuentos aplicados a las compras en función del gasto total del cliente.
+
+*Uso del proyecto*
+Ejecuta la clase Main para iniciar la aplicación.
+Sigue las instrucciones en la consola para agregar productos a la cesta, calcular el precio total, aplicar impuestos y realizar transacciones de compra.
+Se incluye una funcionalidad de descuento que se aplica automáticamente en función del gasto total del cliente.
+
+
+
+*Mas informacion*
+
+La informacion de cada cliente se guarda en un fichero- C:\Users\tomeu\OneDrive\Escritorio\Java1\ficheros\tiendaOnline.txt
+Se pueden hacer tarjetas de cliente en una base de datos - Tabla Usuarios
+Se usan clases abstractas,herencia,interfaces...
